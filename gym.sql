@@ -22,7 +22,7 @@ CREATE TABLE members(username VARCHAR(200), plan VARCHAR(100), trainor VARCHAR(2
 
 ALTER TABLE info ADD time TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
 
-INSERT INTO info(username, password, name, prof, street, city, phone) VALUES('saireddy', '$5$rounds=535000$0Bi3RwmTmkVfjna6$Fr3medYPrwCJeZgC5dCQxAsRubm8zFKB6p7XvbPb.87', 'saireddy', 1, 'IIIT Basar', 'Nirmal Telangana',8501998863);
+INSERT INTO info(username, password, name, prof, street, city, phone) VALUES('saireddy', '$5$rounds=535000$OjcHFa7Td9IJSyzR$ecf/fBzKTsacRXKNQZAXk15B/p1lWqNJpp8UqeUuoS/', 'saireddy', 1, 'IIIT Basar', 'Nirmal Telangana',8501998863);
 
 
 CREATE TABLE progress(username VARCHAR(200), date DATE, daily_result VARCHAR(200),rate VARCHAR(100), time TIMESTAMP DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY(username, date), FOREIGN KEY(username) references members(username));
