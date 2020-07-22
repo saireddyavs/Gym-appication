@@ -9,8 +9,13 @@ from datetime import datetime
 
 app = Flask(__name__)
 
+import os
+db_host='root'
+
+if os.environ.get('db_host') is not None:
+	db_host=os.environ.get('db_host')
 app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_USER'] =  db_host
 app.config['MYSQL_PASSWORD'] = 'password'
 app.config['MYSQL_DB'] = 'Gym'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
