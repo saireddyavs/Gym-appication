@@ -17,7 +17,7 @@ if os.environ.get('db_host') is not None:
 app.config['MYSQL_HOST'] = db_host
 app.config['MYSQL_USER'] =  'root'
 app.config['MYSQL_PASSWORD'] = 'password'
-app.config['MYSQL_DB'] = 'Gym'
+app.config['MYSQL_DB'] = 'example'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 app.secret_key = '528491@JOKER'
 mysql = MySQL(app)
